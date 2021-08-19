@@ -7,9 +7,7 @@ import { UpdateBackgroundPipe } from './update-background.pipe';
     <label for="colorBox">Start typing the color you like:</label>
     <br />
     <input type="text" [(ngModel)]="red" value="green" id="colorBox" />
-    <h1 [style.color]="red | updateBackground">
-      Hello {{ name | updateBackground: red }} !
-    </h1>
+    <h1 [style.color]="red">Hello {{ name | updateBackground: red }} !</h1>
   `,
   styles: [
     `
