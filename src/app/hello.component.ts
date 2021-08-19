@@ -4,7 +4,12 @@ import { UpdateBackgroundPipe } from './update-background.pipe';
 @Component({
   selector: 'hello',
   template: `
-    <h1>Hello {{ name }} !</h1>
+    <label for="colorBox">Start typing the color you like:</label>
+    <br />
+    <input type="text" [(ngModel)]="red" value="green" id="colorBox" />
+    <h1 [style.color]="red | updateBackground">
+      Hello {{ name | updateBackground: red }} !
+    </h1>
   `,
   styles: [
     `
@@ -16,4 +21,6 @@ import { UpdateBackgroundPipe } from './update-background.pipe';
 })
 export class HelloComponent {
   @Input() name: string;
+  red: string = 'red';
+  constructor() {}
 }
