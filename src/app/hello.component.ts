@@ -1,5 +1,4 @@
 import { Component, Input } from '@angular/core';
-import { UpdateBackgroundPipe } from './update-background.pipe';
 
 @Component({
   selector: 'hello',
